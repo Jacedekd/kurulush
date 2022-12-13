@@ -916,6 +916,11 @@ body {
     padding: 0 20px 20px 20px;
 }
 
+.otdelka__Item__title,
+.otdelka__Item__Desc {
+    padding: 0 20px 0px 20px;
+}
+
 .otdelka__Item__title {
     font-style: italic;
     font-weight: 500;
@@ -927,12 +932,12 @@ body {
 
     /* Text / Primary */
     color: #1A1A1A;
-
+    margin-bottom: 12px;
 
 }
 
 .otdelka__Item__Desc {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
 
     /* or 150% */
@@ -940,7 +945,7 @@ body {
 
     /* Text / Primary */
     color: #1A1A1A;
-
+    height: calc(470px - auto);
 
 }
 
