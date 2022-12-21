@@ -1583,7 +1583,9 @@ input[type=radio]:checked~label {
     /* display: none; */
     /* opacity: 0; */
 }
-
+.variant {
+    display: none;
+}
 .full_Price {
     display: flex;
     flex-direction: column;
