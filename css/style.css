@@ -1422,7 +1422,7 @@ body {
 
 .range__Body {
     display: flex;
-    justify-content: space-between;  
+    justify-content: space-between;
     row-gap: 15px;
 }
 
@@ -1437,7 +1437,7 @@ body {
     display: flex;
     justify-content: center;
     margin: 10px auto;
-    
+
 
 }
 
@@ -1465,41 +1465,41 @@ body {
 }
 
 
-.containerUl{
+.containerUl {
     display: block;
     position: relative;
     height: auto;
     width: 95%;
     padding: 20px;
-  }
-  
-  
-  .containerUl ul{
+}
+
+
+.containerUl ul {
     list-style: none;
     margin: 0;
     padding: 0;
-      overflow: auto;
-      display: grid;
-      grid-template-columns: repeat(2, calc(50% - 10px));
-      justify-content: space-between;
-  }
-  
-  .containerUl ul li{
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 10px));
+    justify-content: space-between;
+}
+
+.containerUl ul li {
     color: #AAAAAA;
     display: block;
     position: relative;
     float: left;
     width: 100%;
     height: 90px;
-      border-bottom: 1px solid #333;
-  }
-  
-  .containerUl ul li input[type=radio]{
+    border-bottom: 1px solid #333;
+}
+
+.containerUl ul li input[type=radio] {
     position: absolute;
     visibility: hidden;
-  }
-  
-  .containerUl ul li label{
+}
+
+.containerUl ul li label {
     display: block;
     position: relative;
     font-weight: 300;
@@ -1512,13 +1512,13 @@ body {
     -webkit-transition: all 0.25s linear;
     display: flex;
     justify-content: center;
-  }
-  
-  /* .containerUl ul li:hover label{
+}
+
+/* .containerUl ul li:hover label{
       color: #000;
   } */
-  
-  .containerUl ul li .check{
+
+.containerUl ul li .check {
     display: block;
     position: absolute;
     border: 5px solid #AAAAAA;
@@ -1527,51 +1527,51 @@ body {
     width: 30px;
     top: 32px;
     left: 120px;
-      z-index: 5;
-      transition: border .25s linear;
-      -webkit-transition: border .25s linear;
-  }
-  
-  /* .containerUl ul li:hover .check {
+    z-index: 5;
+    transition: border .25s linear;
+    -webkit-transition: border .25s linear;
+}
+
+/* .containerUl ul li:hover .check {
     border: 5px solid #000;
   }
 
   .containerUl ul li:hover .check::before {
     background-color: #000;
   } */
-  
-  .containerUl ul li .check::before {
+
+.containerUl ul li .check::before {
     display: block;
     position: absolute;
-      content: '';
+    content: '';
     border-radius: 100%;
     height: 12px;
     width: 12px;
     top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+    left: 50%;
+    transform: translate(-50%, -50%);
     margin: auto;
-      transition: background 0.25s linear;
-      -webkit-transition: background 0.25s linear;
-  }
-  
-  input[type=radio]:checked ~ .check {
-    border: 5px solid #1C585A;
-  }
-  
-  input[type=radio]:checked ~ .check::before{
-    background: #1C585A;
-  }
-  
-  input[type=radio]:checked ~ label{
-    color: #1C585A;
-  }
+    transition: background 0.25s linear;
+    -webkit-transition: background 0.25s linear;
+}
 
-  /* input[type=radio]:checked ~ ul li{
+input[type=radio]:checked~.check {
+    border: 5px solid #1C585A;
+}
+
+input[type=radio]:checked~.check::before {
+    background: #1C585A;
+}
+
+input[type=radio]:checked~label {
+    color: #1C585A;
+}
+
+/* input[type=radio]:checked ~ ul li{
     border-bottom: 1px solid red;
   } */
 
-  
+
 
 .inputGroup {
     display: flex;
@@ -1728,4 +1728,70 @@ body {
 .footer__Bottom_Map iframe {
     width: 100%;
     height: 100%;
+}
+
+
+
+
+
+
+.feedback__alert {
+    position: fixed;
+    top: -6vh;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    opacity: 0;
+    overflow: hidden;
+    transition: .2s ease;
+
+}
+
+.feedback__alert.is-active {
+    opacity: 1;
+    overflow: visible;
+    top: 15vh;
+}
+
+.feedback__alertBody {
+    width: 500px;
+    height: auto;
+    padding: 10px 15px;
+    background: #1C585A;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    justify-content: center;
+    transition: .3s;
+    cursor: default;
+    box-shadow: 2px 2px 10px #0b264bd8;
+    flex-direction: column;
+}
+
+.alert__Icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.alert__Icon {
+    width: 55px;
+    height: auto;
+}
+.alert__title {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 25px;
+    color: #fff;
+    margin-bottom: 5px;
+}
+.alert__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+    color: #fff;
+    text-align: center;
 }

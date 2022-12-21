@@ -1,0 +1,25 @@
+
+@media screen and (max-width: 600px) {
+    .feedback__alertBody {
+        width: 80vw;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feedback__alert.is-active {
+        top: 12vh;
+    }
+
+    .alert__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 21px;
+        text-align: center;
+    }
+
+    .alert__Icon {
+        width: 40px;
+        height: 40px;
+    }
+}
