@@ -28,7 +28,7 @@ let select2 = document.querySelector('#select');
 // })
 
 
-
+let calc_price = document.querySelector('.calc_price span')
 let full_Price_P = document.querySelector('.full_Price_P')
 
 
@@ -71,9 +71,8 @@ arr.forEach(e => {
 select.addEventListener('click', () => {
     let value = Number(select.value)
 
-
-    let nemValue = value / 120
-    // full_Price_P.textContent = nemValue + '$'
+    calc_price.textContent = value + '$'
+    
 
     arr.forEach(e => {
         if (e.checked === true) {

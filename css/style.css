@@ -1422,7 +1422,7 @@ body {
 
 .range__Body {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;  
     row-gap: 15px;
 }
 
@@ -1433,6 +1433,12 @@ body {
     color: #fff;
     border-radius: 7px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.224);
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    
+
 }
 
 .range__Body h3 {
@@ -1550,15 +1556,15 @@ body {
   }
   
   input[type=radio]:checked ~ .check {
-    border: 5px solid #0DFF92;
+    border: 5px solid #1C585A;
   }
   
   input[type=radio]:checked ~ .check::before{
-    background: #0DFF92;
+    background: #1C585A;
   }
   
   input[type=radio]:checked ~ label{
-    color: #0DFF92;
+    color: #1C585A;
   }
 
   /* input[type=radio]:checked ~ ul li{
