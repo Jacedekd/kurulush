@@ -94,3 +94,67 @@ select.addEventListener('click', () => {
         }
     })
 })
+
+// $.mask.definitions['8']='[9]';
+// $(".card__Vizitka__GroupInput").mask("+9(999) 999-9999");
+
+
+var element = document.querySelector('.card__Vizitka__GroupInput');
+var maskOptions = {
+    mask: '+{9}(000)000-000-00'
+};
+var mask = IMask(element, maskOptions);
+
+
+
+
+function loanCalculator(amount, rate, term) {
+    const monthlyRate = rate / 100 / 12;
+    const monthlyPayment = amount * monthlyRate / (1 - (Math.pow(1 / (1 + monthlyRate), term)));
+    return monthlyPayment.toFixed(2);
+}
+
+function calculate() {
+    let amount = document.getElementById("amount").value;
+    let rate = document.getElementById("rate").value;
+    let term = document.getElementById("term").value;
+    let currency = document.querySelector(".styled-select").value;
+
+    let monthlyPayment = loanCalculator(amount, rate, term);
+    monthlyPayment = Math.round(monthlyPayment);
+    // monthlyPayment = new Intl.NumberFormat('ru-RU').format(monthlyPayment);
+
+    let countSpan = document.createElement('div')
+    let countSpan2 = document.createElement('div')
+    countSpan.classList.add('countSpan')
+    countSpan2.classList.add('countSpan')
+    if (currency === 'Сомы') {
+        countSpan.innerHTML = 'сомов'
+        countSpan2.innerHTML = 'сомов'
+    } 
+    else if (currency === 'Доллары') {
+        countSpan.innerHTML = 'долларов сша'
+        countSpan2.innerHTML = 'долларов сша'
+    } 
+    else if (currency === 'Рубли') {
+        countSpan.innerHTML = 'рублей'
+        countSpan2.innerHTML = 'рублей'
+    } 
+    else if (currency === 'Тенге') {
+        countSpan.innerHTML = 'тенге'
+        countSpan2.innerHTML = 'тенге'
+    }
+
+    document.querySelector(".calculator2__amountRate").innerHTML = new Intl.NumberFormat('ru-RU').format(monthlyPayment);
+    document.querySelector(".calculator2__amountRate").append(countSpan)
+
+    let totalCount = monthlyPayment * term;
+
+    document.querySelector(".calculator2__amountTotal").innerHTML = new Intl.NumberFormat('ru-RU').format(totalCount);
+    document.querySelector(".calculator2__amountTotal").append(countSpan2)
+}
+
+document.querySelector('.calculator2__InfoBtn').addEventListener('click', (e) => {
+    e.preventDefault()
+    calculate()
+})

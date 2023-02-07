@@ -112,13 +112,14 @@
                     <div class="card__Vizitka__menu_li"><img src="./assets/img/card__Vizitka.svg" alt="">
                         Прогуляетесь по благоустроенному району</div>
                 </div>
-                <div class="card__Vizitka__Group">
+                <form action="./send.php" method="POST" class="card__Vizitka__Group">
                     <div class="card__Vizitka__GroupItem">
                         <div class="card__Vizitka__Group__text">Закрепить за номером</div>
-                        <input class="card__Vizitka__GroupInput" placeholder="+7 ___ ___-__-__">
+                        <input type="tel" class="card__Vizitka__GroupInput" placeholder="+9(999)999-999-99" name="phone"
+                            placeholder="+9(999)999-999-99">
                     </div>
-                    <button class="card__Vizitka__GroupBtn">Записаться на презентацию</button>
-                </div>
+                    <button type="submit" class="card__Vizitka__GroupBtn">Записаться на презентацию</button>
+                </form>
                 <div class="card__Vizitka_end">Нажимая на кнопку, вы даёте согласие на обработку персональных данных и
                     соглашаетесь c политикой конфиденциальности</div>
             </div>
@@ -474,7 +475,7 @@
                 </div>
             </div>
         </div>
-        <div class="card__Vizitka card__Vizitka2">
+        <!-- <div class="card__Vizitka card__Vizitka2">
             <div class="card__Vizitka__item">
                 <div class="card__Vizitka__title">Посмотрите все планировки и форматы квартир</div>
                 <div class="card__Vizitka__title2">Скачайте каталог с планировками, полным описанием и стоимостью</div>
@@ -490,7 +491,7 @@
             <div class="card__Vizitka__item vizitkaitem2">
                 <img src="./assets/img/card__VizitkaImg2.png" alt="">
             </div>
-        </div>
+        </div> -->
         <div class="mainCards">
             <div class="mainCards__title">Двор без машин — вся парковка под землёй</div>
             <div class="mainCards__desc">Наслаждайтесь изобилием деревьев и кустарников во дворе, никаких машин — только
@@ -574,7 +575,7 @@
 
             </div>
         </div>
-        <div class="card__Vizitka card__Vizitka2 card__Vizitka3">
+        <!-- <div class="card__Vizitka card__Vizitka2 card__Vizitka3">
             <div class="card__Vizitka__item">
                 <div class="card__Vizitka__title">Узнайте больше про благоустройство ЖК «Кудайберген»</div>
                 <div class="card__Vizitka__title2">скачав подробную PDF-презентацию</div>
@@ -590,7 +591,7 @@
             <div class="card__Vizitka__item vizitkaitem2 vizitkaitem3">
                 <img src="./assets/img/card__Vizitka3.png" alt="">
             </div>
-        </div>
+        </div> -->
         <div class="cardsBlocking">
             <div class="container__Two">
 
@@ -641,7 +642,7 @@
                 </div>
             </div>
         </div>
-        <div class="card__Vizitka card__Vizitka4">
+        <!-- <div class="card__Vizitka card__Vizitka4">
             <div class="card__Vizitka__item">
                 <div class="card__Vizitka__subtitle">СПЕЦИАЛЬНО ДЛЯ ВАС</div>
                 <div class="card__Vizitka__title">Персональная презентация Доолот Курулуш</div>
@@ -666,7 +667,7 @@
             <div class="card__Vizitka__item">
                 <img src="./assets/img/card__VizitkaImg.png" alt="">
             </div>
-        </div>
+        </div> -->
         <div class="parkink parkink2">
             <div class="container__Two">
                 <div class="parking__Body">
@@ -720,15 +721,16 @@
                 </div>
             </div>
         </div>
+        <!-- <div class="calculator__title">Рассчёт стоимости квартиры</div> -->
         <div class="calculator">
             <div class="container">
-                <div class="calculator__Body">
-                    <div class="calculator__title">Рассчёт стоимости квартиры</div>
-                    <div class="calculator__Form">
-                        <div class="range__Body">
-                            <h3>Выберите квартиру *</h3>
-                            <h3 class="calc_price">Общая цена: <span>0$</span></h3>
-                        </div>
+                <div class="calculator__Main">
+                    <div class="calculator__Body">
+                        <div class="calculator__Form">
+                            <div class="range__Body">
+                                <h3>Выберите квартиру *</h3>
+                                <h3 class="calc_price">Общая цена: <span>0$</span></h3>
+                            </div>
                             <select name="select" id="select">
                                 <option value="value1" selected disabled>Выберите квартиру</option>
                                 <option value="36750">1.комн 49.00 м²</option>
@@ -738,47 +740,29 @@
                                 <option value="35978">1.комн 47.97 м²</option>
                             </select>
                             <h3 class="let10">Рассрочка на 10 лет *</h3>
-                            <!-- <div class="inputGroupMain">
-                                <div class="inputGroup">
-                                    <input id="cbox4" type="radio" name="calckradio" id="" placeholder="" checked>
-                                    <label for="cbox4">Без Взносa </label>
-                                </div>
-                                <div class="inputGroup">
-                                    <input id="cbox1" type="radio" name="calckradio" id="" placeholder="Взнос 10%">
-                                    <label for="cbox1">Взнос 10% </label>
-                                </div>
-                                <div class="inputGroup">
-                                    <input id="cbox2" type="radio" name="calckradio" id="" placeholder="Взнос 20%">
-                                    <label for="cbox2">Взнос 20%</label>
-                                </div>
-                                <div class="inputGroup">
-                                    <input id="cbox3" type="radio" name="calckradio" id="" placeholder="Взнос 30%">
-                                    <label for="cbox3">Взнос 30%</label>
-                                </div>
-                            </div> -->
                             <input type="text" class="variant" placeholder="Введите свой бюджет">
                             <div class="containerUl">
                                 <ul>
                                     <li>
                                         <input type="radio" id="cbox4" name="selector">
                                         <label for="cbox4">Без Взносa</label>
-                        
+
                                         <div class="check"></div>
                                     </li>
-                        
+
                                     <li>
                                         <input type="radio" id="cbox1" name="selector">
                                         <label for="cbox1">Взнос 10%</label>
-                        
+
                                         <div class="check">
                                             <div class="inside"></div>
                                         </div>
                                     </li>
-                        
+
                                     <li>
                                         <input type="radio" id="cbox2" name="selector">
                                         <label for="cbox2">Взнос 20%</label>
-                        
+
                                         <div class="check">
                                             <div class="inside"></div>
                                         </div>
@@ -787,23 +771,64 @@
                                     <li>
                                         <input type="radio" id="cbox3" name="selector">
                                         <label for="cbox3">Взнос 30%</label>
-                        
+
                                         <div class="check">
                                             <div class="inside"></div>
                                         </div>
                                     </li>
                                 </ul>
                             </div>
-                        
-
-                        
-
                             <div class="full_Price">
                                 <div class="full_Price__Title">Сумма за месяц</div>
                                 <div class="full_Price_P">0$</div>
                             </div>
-                       
+                        </div>
+                    </div>
+                    <div class="calculator2__Body">
+                        <div class="calculator2__Item">
+                            <div class="calculator2Title">Рассчитайте свой кредит</div>
+                            <div class="calculator2__Form">
+                                <div class="input-group">
+                                    <label for="amount">Сумма кредита</label>
+                                    <input type="text" id="amount">
+                                </div>
+                                <div class="input-group">
+                                    <label for="currency">Валюта</label>
+                                    <div class="select-wrapper">
+                                        <select class="styled-select">
+                                            <option value="Сомы">Сомы</option>
+                                            <option value="Доллары">Доллары</option>
+                                            <option value="Рубли">Рубли</option>
+                                            <option value="Тенге">Тенге</option>
+                                        </select>
+                                        <div class="select-arrow">
+                                            <svg viewBox="0 0 24 24">
+                                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z">
+                                                </path>
+                                            </svg>
+                                        </div>
+                                    </div>
 
+
+                                </div>
+                                <div class="input-group">
+                                    <label for="term">Срок кредита (в месяцах)</label>
+                                    <input type="text" id="term">
+                                </div>
+                                <div class="input-group">
+                                    <label for="rate">Ставка (% годовых)</label>
+                                    <input type="text" id="rate">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calculator2__Info">
+                            <div class="calculator2__amountRateText">Сумма ежемесячных взносов</div>
+                            <div class="calculator2__amountRate">-----</div>
+                            <div class="calculator2__amountTotalText">Общая сумма выплат за весь период кредитования
+                            </div>
+                            <div class="calculator2__amountTotal">-----</div>
+                            <div class="calculator2__InfoBtn">Рассчитать </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -853,6 +878,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/swiper.js"></script>
+    <script src="./js/jquery.js"></script>
+    <!-- <script src="./js/jquery.maskedinput.min.js"></script> -->
+    <script src="https://unpkg.com/imask"></script>
     <script src="./js/main.js"></script>
 </body>
 
